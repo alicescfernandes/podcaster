@@ -1,0 +1,2 @@
+//Will represent a playlist
+//extends abstract GenericModel

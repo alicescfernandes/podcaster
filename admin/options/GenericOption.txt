@@ -1,0 +1,3 @@
+//abstract class for an option
+
+register() -> adds the option to the available options 

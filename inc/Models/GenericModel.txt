@@ -1,0 +1,1 @@
+//abstract class that implements read from json & send from json
