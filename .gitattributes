@@ -1,2 +1,2 @@
 vendor/* linguist-vendored
-*.min.js linguist-vendored=false
+**/*.min.js linguist-vendored=false
