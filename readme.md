@@ -12,8 +12,9 @@ Like all college projects, you are always given a set of requirements that you m
 - Use a database, preferably MariaDB
 - Use an external service, either developed by the student with Servlets, or any third-party one
 - Users, with a permissions system
-- Edit, add or remove content
+- Backoffice for editing, add or remove content
 - Front-office to display the content
+
 _(There are a couple of more that i can't remember now, but every requirement had a percentage of the final project grade)_
 
 
