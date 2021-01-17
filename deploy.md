@@ -14,7 +14,7 @@ For apache2 & mysql. Guide for EC2 with Ubuntu
     1. Enable the mod_rewritee
     2. Add AllowOverride rule to the default config
     3. If you get a SimpleXML error, install SimpleXML   
-        ```sudo apt install php7-xml```   
+        ```sudo apt install php-xml```   
         ```sudo apt-get install php-xml```
     4. Install GD  
     ```sudo apt-get install php-gd```
