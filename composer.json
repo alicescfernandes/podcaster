@@ -1,11 +1,10 @@
 {
-    "require": {
-        "eftec/bladeone": "^3.44",
-        "klein/klein": "^2.1",
-        "gumlet/php-image-resize": "1.9.*",
-        "aws/aws-sdk-php": "^3.138",
-        "phpauth/phpauth": "dev-master",
-        "phpmailer/phpmailer": "^6.1",
-        "gregwar/captcha": "^1.1"
-    }
+	"require": {
+		"eftec/bladeone": "^3.44",
+		"klein/klein": "^2.1",
+		"gumlet/php-image-resize": "1.9.*",
+		"aws/aws-sdk-php": "^3.138",
+		"phpmailer/phpmailer": "^6.1",
+		"gregwar/captcha": "^1.1"
+	}
 }

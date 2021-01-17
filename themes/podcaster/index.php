@@ -14,13 +14,13 @@ if (isset($_SESSION['logged_user'])) {
     $user_visiblity[] = "private";
 }
 
-require_once __DIR__ . "\.htversioning.php";
-require_once ROOT_DIR . '\inc\DB\Episodes.php';
-require_once ROOT_DIR . '\inc\DB\Playlists.php';
-require_once ROOT_DIR . '\inc\DB\Roles.php';
-require_once ROOT_DIR . '\inc\DB\Users.php';
-require_once ROOT_DIR . '\inc\FileManager.php';
-require_once ROOT_DIR . '\inc\S3Connector.php';
+require_once __DIR__ . "/.htversioning.php";
+require_once ROOT_DIR . '/inc/DB/Episodes.php';
+require_once ROOT_DIR . '/inc/DB/Playlists.php';
+require_once ROOT_DIR . '/inc/DB/Roles.php';
+require_once ROOT_DIR . '/inc/DB/Users.php';
+require_once ROOT_DIR . '/inc/FileManager.php';
+require_once ROOT_DIR . '/inc/S3Connector.php';
 
 use DB\Episodes;
 use DB\Playlists;

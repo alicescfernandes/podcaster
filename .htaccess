@@ -1,0 +1,15 @@
+# Apache (.htaccess or httpd.conf)
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !^/admin/
+RewriteCond %{REQUEST_URI} !^/uploads/
+RewriteRule . /index.php [L] 
+
+# PHP Stuff 
+php_value upload_max_filesize 256M
+php_value post_max_size 256M
+php_value max_execution_time 200
+php_value max_input_time 200
+php_value short_open_tag 1
+
+

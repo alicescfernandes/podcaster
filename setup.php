@@ -21,9 +21,10 @@ if (isset($_POST["submit"])) { //only allow this via post method
     $base = dirname($_SERVER['SCRIPT_NAME']);
     $root_dir = $_SERVER["DOCUMENT_ROOT"] . $base;
     $http_host = $_SERVER['HTTP_HOST'] . $base;
- 
+
+
     $data = "<?php
-    require_once('.htconstants.php');
+
     define('DB_NAME','$db_name');
     define('DB_USER','$user_name');
     define('DB_PASS','$user_pwd');
@@ -31,21 +32,19 @@ if (isset($_POST["submit"])) { //only allow this via post method
     define('DB_PORT','$srv_port');
     define('DEFAULT_THEME','podcaster');
 
-    define('AWS_REGION','us-east-2');
-    define('AWS_KEY','AKIAJB57IHG6QWTFC2UA');
-    define('AWS_SECRET','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');
-    define('AWS_S3_BUCKET','podcasterisel');
+    define('AWS_REGION','{$_REQUEST['s3_region']}');
+    define('AWS_KEY','{$_REQUEST['s3_key']}');
+    define('AWS_SECRET','{$_REQUEST['s3_key']}');
+    define('AWS_S3_BUCKET','{$_REQUEST['s3_bucket']}');
     
-    define('EMAIL_SERVER','smtp.gmail.com');
-    define('EMAIL_USER','aliceisel45741@gmail.com');
-    define('EMAIL_PASSWORD','hbnmfdyoeeahjovw');
-    define('EMAIL_PORT',587);
+    define('EMAIL_SERVER','{$_REQUEST['email_host']}');
+    define('EMAIL_USER','{$_REQUEST['email_username']}');
+    define('EMAIL_PASSWORD','{$_REQUEST['email_pwd']}');
+    define('EMAIL_PORT',{$_REQUEST['email_port']});
 
     define('BASE', '$base');
     define('ROOT_DIR','$root_dir');
     define('HTTP_HOST', '$http_host');
-
-
     ?>";
 
     //Create the so-needed aditional tables for the CMS to use 
@@ -55,21 +54,20 @@ if (isset($_POST["submit"])) { //only allow this via post method
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
+
     if ($conn->query("CREATE SCHEMA `$db_name`;") === TRUE) {
     } else {
         echo "Error creating table: " . $conn->error;
-        die();
     }
 
     if ($conn->query("USE `$db_name`;") === TRUE) {
     } else {
         echo "Error creating table: " . $conn->error;
-        die();
     }
 
     $success = true;
     //Run commands line-by-line
-    $handle = fopen(getcwd() . "/setup_files/db.sql", "r");
+    $handle = fopen($_SERVER["DOCUMENT_ROOT"] . "/setup_files/db.sql", "r");
     if ($handle) {
         while (($line = fgets($handle)) !== false) {
             // process the line read.
@@ -99,7 +97,7 @@ if (isset($_POST["submit"])) { //only allow this via post method
         die();
     }
 
-    if ($success) file_put_contents(getcwd() . "/" . $config_filename, $data);
+    if ($success) file_put_contents($_SERVER["DOCUMENT_ROOT"] . "/" . $config_filename, $data);
 
     $conn->close();
 
@@ -129,14 +127,13 @@ $config_exists = file_exists($config_filename);
                     <legend>
                         Database Settings
                     </legend>
-                    <p>This script handles the creation of the table</p>
                     <p>Database name: <input name="db_name" type="text" required minlength="1"> </p>
                     <p>User name: <input name="db_user_name" type="text" required minlength="1"> </p>
-                    <p>User password: <input name="db_user_pwd" type="password"> </p>
+                    <p>User password: <input name="db_user_pwd" type="password" required minlength="5"> </p>
                     <p>Server: <input name="srv_name" value="localhost" type="text" required minlength="1"> </p>
                     <p>Server port: <input name="srv_port" value="3307" type="number" required minlength="1"> </p>
                 </fieldset>
-                <!--<fieldset>
+                <fieldset>
                     <legend>
                         Email settings
                     </legend>
@@ -155,7 +152,7 @@ $config_exists = file_exists($config_filename);
                     <p>Key: <input name="s3_key" value="" type="text" required> </p>
                     <p>Secret: <input name="s3_secret" type="password" required minlength="5"> </p>
                 </fieldset>
-        -->
+
                 <fieldset>
                     <legend>
                         Administrator User settings
@@ -176,7 +173,8 @@ $config_exists = file_exists($config_filename);
 
         <script>
             window.setTimeout(function() {
-                window.location.href = "//<?= $http_host ?>";
+                window.location.href = "/";
+
             }, 1 * 1000)
         </script>
     <?php  } ?>
