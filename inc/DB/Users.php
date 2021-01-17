@@ -56,7 +56,7 @@ class Users extends DB{
     }
    
     static function check_email($id){
-        $query = "SELECT validated FROM email_validation where id={$id};";
+        $query = "SELECT validated FROM email_validation where user_id={$id};";
         return static::make_query($query);
     }
    

@@ -86,7 +86,7 @@ $klein->respond('GET', BASE . '/playlists/[:id]', function ($request) {
 
     $playlist = Playlists::get_by_id($request->id);
     $episodesOnPlaylists = Playlists::get_items_from($request->id);
-    $user = Users::get_by_id($playlist->created_by_user_id);
+    $user = Users::get_by_id($playlist->edited_by_user_id);
     for ($i = 0; $i < count($episodesOnPlaylists); $i++) {
         $episodesOnPlaylists[$i] = $episodesOnPlaylists[$i]->episode_id;
     }

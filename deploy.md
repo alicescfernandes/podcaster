@@ -16,6 +16,9 @@ For apache2 & mysql. Guide for EC2 with Ubuntu
     3. If you get a SimpleXML error, install SimpleXML   
         ```sudo apt install php7-xml```   
         ```sudo apt-get install php-xml```
+    4. Install GD  
+    ```sudo apt-get install php-gd```
+    ```sudo apt install php-gd```
 4. On your `php.ini` do the following:  
     1. change `max_upload_size` to `256M`
     2. change `max_upload_size` to `256M`
