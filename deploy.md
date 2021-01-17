@@ -33,5 +33,7 @@ For apache2 & mysql. Guide for EC2 with Ubuntu
     1. Get a SSL certificate
     2. Install the certs on apache  
         https://help.zerossl.com/hc/en-us/articles/360058295854-Installing-SSL-Certificate-on-Apache
+    3. Copy the certs, and configure apache to use those certs
+
 7. Restart your apache2  
 ```sudo systemctl restart apache2```
