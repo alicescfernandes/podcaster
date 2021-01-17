@@ -15,6 +15,7 @@
             <a class="user-stuff" href="//{{HTTP_HOST}}/admin/"> <img src="<?= $_SESSION["avatar_url"]. "?".time();  ?>"/> Admin panel</a>
         @else
             <a class="user-stuff" href="//{{HTTP_HOST}}/admin/login.php">Login</a>
+            <a class="user-stuff"  href="//{{HTTP_HOST}}/admin/register.php">Create Account</a>
         @endif
     </header>
     <div id="main" class="container">
