@@ -23,6 +23,15 @@ For apache2 & mysql. Guide for EC2 with Ubuntu
     1. change `max_upload_size` to `256M`
     2. change `max_upload_size` to `256M`
     3. set `short_open_tag` to `On`
-5. Restart your apache2  
+5. In your PHP do:
+    1. Enable mod_ssl  
+    `sudo a2enmod ssl`
+    2. Enable mod_rewrite   
+    `sudo a2enmod rewrite`
+5. On MySQL create a user, with write privileges
+6. Setup HTTPS
+    1. Get a SSL certificate
+    2. Install the certs on apache  
+        https://help.zerossl.com/hc/en-us/articles/360058295854-Installing-SSL-Certificate-on-Apache
+7. Restart your apache2  
 ```sudo systemctl restart apache2```
-6. On mySQL create a user, with write privileges
