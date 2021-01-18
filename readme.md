@@ -13,7 +13,6 @@ Podcaster was a project that was developed during the summer semester of 19/20 f
 ## Requirements
 Like all college projects, you are always given a set of requirements that you must follow. Some of them where: 
 - Use PHP, since this was part of class programme
-- Composer, only if you want to update the packages
 - Use a database, preferably MariaDB
 - Use an external service, either developed by the student with Servlets, or any third-party one
 - Users, with a permissions system
@@ -26,7 +25,7 @@ _(There are a couple of more that i can't remember now, but every requirement ha
 ## Development
 So, keeping this short, the images were stored on the server disk while the audio is sent to an Amazon S3 bucket. The key of the file was then stored within the databse, and during the page generation, an authenticated s3 url is generated to serve the respective audio.
 
-The emails were sent using a pre-configured Gmail account, with the PHPMailer Lib. The front-office is rendered with blade templates, and there is minimal javascript on this project
+The emails were sent using a pre-configured Gmail account, with the PHPMailer Lib. The front-office is rendered with blade templates, and there is minimal javascript on this project. This uses Composer as a package manager
 
 I have a detailed text on how this is working together, as part of the final written report for the project. It's in portuguese if you care to read, and it's the `detail.pdf` file. For that report, i had to do a couple of diagrams.
 
