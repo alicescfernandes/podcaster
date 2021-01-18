@@ -4,7 +4,7 @@
 ![](example1.png)
 Hi all. 
 
-Podcaster was a project that was developed during the summer semester of 19/20 for a class called [SMI](https://sigq.isel.pt/en/subjects/multimedia-systems-for-the-internet-leim). The subject of this class is about architecture of websites, and the final project was develping a CMS that would allow the users to host / edit content. The theme for this CMS was music, and what i proposed was to develop a CMS to host podcasts. This several libs, and also uses composer as a package manager.
+Podcaster was a project that was developed during the summer semester of 19/20 for a class called [SMI](https://sigq.isel.pt/en/subjects/multimedia-systems-for-the-internet-leim). The subject of this class is about architecture of websites, and the final project was develping a CMS that would allow the users to host / edit content. The theme for this CMS was music, and what i proposed was to develop a CMS to host podcasts.  
 
 ~~None of this works now, because i just ended up shutting down the S3 account. Might have it hosted so you people can try it out.~~ 
 **It's hosted now! [http://podcasterapp.dev/](http://podcasterapp.dev/)**
@@ -13,6 +13,7 @@ Podcaster was a project that was developed during the summer semester of 19/20 f
 ## Requirements
 Like all college projects, you are always given a set of requirements that you must follow. It the following: 
 - Use PHP, since this was part of class programme
+- Composer, only if you want to update the packages
 - Use a database, preferably MariaDB
 - Use an external service, either developed by the student with Servlets, or any third-party one
 - Users, with a permissions system
