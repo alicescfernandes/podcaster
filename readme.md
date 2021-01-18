@@ -20,7 +20,7 @@ Like all college projects, you are always given a set of requirements that you m
 - Front-office to display the content
 
 _(There are a couple of more that i can't remember now, but every requirement had a percentage of the final project grade)_
-
+<img src="https://www.google-analytics.com/collect?v=1&amp;t=event&amp;tid=UA-100869248-2&amp;cid=555&amp;ec=github&amp;ea=pageview&amp;el=podcaster&amp;ev=1" alt="">
 
 ## Development
 So, keeping this short, the images were stored on the server disk while the audio is sent to an Amazon S3 bucket. The key of the file was then stored within the databse, and during the page generation, an authenticated s3 url is generated to serve the respective audio.
