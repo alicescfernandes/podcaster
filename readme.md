@@ -11,7 +11,7 @@ Podcaster was a project that was developed during the summer semester of 19/20 f
 
 
 ## Requirements
-Like all college projects, you are always given a set of requirements that you must follow. It the following: 
+Like all college projects, you are always given a set of requirements that you must follow. Some of them where: 
 - Use PHP, since this was part of class programme
 - Composer, only if you want to update the packages
 - Use a database, preferably MariaDB
