@@ -1,14 +1,15 @@
 <img src="logo.png" width=300>
 <hr/>
 
-![](example1.png)
 Hi all. 
 
-Podcaster was a project that was developed during the summer semester of 19/20 for a class called [SMI](https://sigq.isel.pt/en/subjects/multimedia-systems-for-the-internet-leim). The subject of this class is about architecture of websites, and the final project was develping a CMS that would allow the users to host / edit content. The theme for this CMS was music, and what i proposed was to develop a CMS to host podcasts.  
+Podcaster was a project that was developed during the summer semester of 19/20 for a class called [Sistemas Multimédia para a Internet](https://www.isel.pt/sites/default/files/FUC_202425_2984.pdf)
+( [Multimedia Systems for the Internet](https://www.isel.pt/sites/default/files/FUC_202425_2984.pdf) in english). The subject of this class is about architecture of websites, and the final project was develping a CMS that would allow the users to host / edit content. The theme for this CMS was music, and what i proposed was to develop a CMS to host podcasts.  
 
 ~~None of this works now, because i just ended up shutting down the S3 account. Might have it hosted so you people can try it out.~~ 
 **It's hosted now! [http://podcasterapp.dev/](http://podcasterapp.dev/)**
 
+![](example1.png)
 
 ## Requirements
 Like all college projects, you are always given a set of requirements that you must follow. Some of them where: 
